@@ -1,0 +1,30 @@
+.normal-card__container {
+  width: 700px;
+  margin-bottom: 15px;
+}
+
+.normal-card__content__container {
+  display: flex;
+  flex-direction: row;
+}
+
+.normal-card__image > img {
+  width: 100%;
+  width: 200px;
+  min-width: 200px;
+  margin-right: 20px;
+}
+
+.normal-card__title > h1 > a{
+  text-decoration: none;
+}
+
+.normal-card__title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.normal-card__container__separator {
+  margin-top: 10px;
+}
