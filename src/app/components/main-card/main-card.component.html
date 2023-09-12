@@ -1,19 +1,16 @@
 <div class="main-card__container">
   <div class="main-card__image">
-    <img src="https://media-cldnry.s-nbcnews.com/image/upload/t_nbcnews-fp-1200-630,f_auto,q_auto:best/MSNBC/Components/Photo/_new/100506-ironman2-hmed.jpg"
+    <img src="{{ imageCover }}"
     alt="main-card"
     height="200px"
     >
   </div>
 
   <div class="main-card__title">
-    <h1>Saiu a nova versão do Angular!</h1>
+    <h1><a href="#">{{ cardTitle }}</a></h1>
   </div>
 
   <div class="main-card__description">
-    <p>Finalmente! Para os entusiastas de plantão. A nova versão do angular finalmente está disponível
-    para testes. A versão oficial (versão instável) ainda não está disponível oficialmente, mas você
-    pode ser uma das primeiras pessoas a testar a nova versão que está sendo desenvolvida no momento
-    da postagem desse blog</p>
+    <p>{{ cardDescription }}</p>
   </div>
 </div>

@@ -17,6 +17,7 @@
 
 .normal-card__title > h1 > a{
   text-decoration: none;
+  font-size: 24px;
 }
 
 .normal-card__title {
