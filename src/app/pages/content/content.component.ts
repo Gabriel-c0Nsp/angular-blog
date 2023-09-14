@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
+import { fakeData } from '../../data/fakeData';
 
 @Component({
   selector: 'app-content',
@@ -7,13 +9,27 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ContentComponent implements OnInit {
 
-  imageCover: string = 'https://cdn.marvel.com/content/1x/004tho_ons_mas_mob_04.jpg'
-  contentTitle: string = 'MINHA NOTÍCIA'
-  contentDescription: string = 'Qualquer coisa aqui sobre a notícia'
+  imageCover: string = ''
+  contentTitle: string = ''
+  contentDescription: string = ''
+  private id: string | null = '0'
 
-  constructor() { }
+  constructor(
+    private route:ActivatedRoute
+  ) { }
 
   ngOnInit(): void {
+    this.route.paramMap.subscribe( value =>
+      this.id = value.get('id')
+    )
+    this.setValuesToComponent(this.id)
+  }
+
+  setValuesToComponent(id: string | null) {
+    const result = fakeData.filter(article => article.id == id)[0]
+    this.contentTitle = result.title
+    this.contentDescription = result.description
+    this.imageCover = result.imageCover
   }
 
 }

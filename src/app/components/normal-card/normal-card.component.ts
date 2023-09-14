@@ -11,6 +11,8 @@ export class NormalCardComponent implements OnInit {
   imageCover: string = ""
   @Input()
   cardTitle: string = ""
+  @Input()
+  id: string = "0"
 
   constructor() { }
 

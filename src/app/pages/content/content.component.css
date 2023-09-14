@@ -1,5 +1,4 @@
 .content__container {
-  border: 1px solid white;
   width: 100%;
   height: 100vh;
   margin-top: 20px;
@@ -10,6 +9,7 @@
 
 .content__container > a {
   text-decoration: none;
+  margin-top: 20px;
 }
 
 .content__container > a:hover {
